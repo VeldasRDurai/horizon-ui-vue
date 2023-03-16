@@ -1,0 +1,18 @@
+const DASHBOARD = "DASHBOARD";
+const NFT_MARKETPLACE = "NFT_MARKETPLACE";
+const TABLES = "TABLES";
+const KANBAN = "KANBAN";
+const PROFILE = "PROFILE";
+const SIGN_IN = "SIGN_IN";
+
+const ALL = [ DASHBOARD, NFT_MARKETPLACE, TABLES, KANBAN, PROFILE, SIGN_IN ];
+
+export default {
+    DASHBOARD,
+    NFT_MARKETPLACE,
+    TABLES,
+    KANBAN,
+    PROFILE,
+    SIGN_IN,
+    ALL
+}

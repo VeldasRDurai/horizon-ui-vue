@@ -1,4 +1,6 @@
 <script setup>
+    import PAGE_TYPES from '../../page-types';
+
     import sidebarItem from './sidebar-item.vue';
 </script>
 
@@ -7,7 +9,9 @@
         <sidebarItem v-for="item in items" 
             :name=item.name 
             :icon=item.icon
-            :selected=item.selected />
+            :type=item.type
+            :selected="item.type===currentPage?true:false"
+            @click="setCurrentPage(item.type)" />
     </div>
 </template>
 
@@ -15,15 +19,17 @@
     export default {
         name: 'SidebarItems',
 		components:{},
+        props:[ 'currentPage','setCurrentPage' ],
         data(){
             return {
                 items : [ 
-                    { name: "Dashboard", icon: "fa-solid fa-house", selected:true },
-                    { name: "NFT Marketplace", icon: "fa-sharp fa-cart-shopping" },
-                    { name: "Tables", icon: "fa-solid fa-chart-simple" },
-                    { name: "Kanban", icon: "fa-solid fa-objects-column" },
-                    { name: "Profile", icon: "fa-solid fa-user" },
-                    { name: "Sign In", icon: "fa-solid fa-lock" },
+                    { type: PAGE_TYPES.DASHBOARD, name: "Dashboard", icon: "fa-solid fa-house" },
+                    { type: PAGE_TYPES.NFT_MARKETPLACE, name: "NFT Marketplace", icon: "fa-sharp fa-cart-shopping" },
+                    { type: PAGE_TYPES.TABLES, name: "Tables", icon: "fa-solid fa-chart-simple" },
+                    { type: PAGE_TYPES.KANBAN, name: "Kanban", icon: "fa-solid fa-cart-shopping" },
+                    // {  type: PAGE_TYPES.KANBAN, name: "Kanban", icon: "fa-solid fa-objects-column" },
+                    { type: PAGE_TYPES.PROFILE, name: "Profile", icon: "fa-solid fa-user" },
+                    { type: PAGE_TYPES.SIGN_IN, name: "Sign In", icon: "fa-solid fa-lock" },
                 ]
             }
         },
@@ -34,7 +40,7 @@
 <style scoped>
     div#sidebar-items{
         font-family: 'DM Sans';
-        font-weight: 500;
+        font-weight: 700;
         font-size: 14px;
         color: #A3AED0;
     }

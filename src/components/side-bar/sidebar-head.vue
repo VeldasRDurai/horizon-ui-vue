@@ -3,10 +3,10 @@
 
 <template>
     <div id="horizon">
-        <div id="horizon">
+        <div id="horizon-text">
             HORIZON 
         </div> 
-        <div id="free">
+        <div id="free-text">
             FREE
         </div>
     </div>
@@ -19,15 +19,16 @@
         justify-content: center;
         font-family: 'Poppins';
         color: #2B3674;
+        padding: 30px 0 60px 0;
     }
     div#horizon 
-    #horizon{
-        font-size: 19px;
+    #horizon-text{
+        font-size: 21px;
         font-weight: 700;
     }
     div#horizon 
-    #free{
-        font-size: 16px;
+    #free-text{
+        font-size: 19px;
         font-weight: 500;
     }
 
