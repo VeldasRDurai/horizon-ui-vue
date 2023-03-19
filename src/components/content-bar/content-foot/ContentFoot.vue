@@ -20,6 +20,7 @@
 
 <style scoped>
     #content-foot{
+        margin-top: 100px;
         font-family: 'DM Sans';
         font-weight: 500;
         font-size: 11px;
