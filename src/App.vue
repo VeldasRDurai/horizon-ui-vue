@@ -9,7 +9,7 @@
 		name: "App",
 		data(){
 			return{
-				currentPage : PAGE_TYPES.NFT_MARKETPLACE
+				currentPage : PAGE_TYPES.TABLES
 			}
 		},
 		methods:{
